@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "wFJW/oGftuJnDifvd4Cr1MzVMMja1IO/iDAvJZ6jCyCF9Wqe4KkOF6ry4mQeFTgnIBHakclOKhs4OAsu8iAVVg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Samod\\source\\repos\\Mini-project-for-kapaix\\Mini-project-for-kapaix\\Mini-project-for-kapaix.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Samod\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
+    "C:\\Users\\Samod\\.nuget\\packages\\microsoft.playwright\\1.47.0\\microsoft.playwright.1.47.0.nupkg.sha512",
+    "C:\\Users\\Samod\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "C:\\Users\\Samod\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\Samod\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
+    "C:\\Users\\Samod\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
