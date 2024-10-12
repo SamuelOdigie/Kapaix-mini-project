@@ -8,21 +8,30 @@ namespace kapaix_mini_project
     {
         static async Task Main(string[] args)
         {
-            // URL to scrape data from
+            // Set the date for which data needs to be scraped (October 7, 2024)
             DateTime desiredDate = new DateTime(2024, 10, 07);
-            string url = "https://empire.britned.com/public/aggregated-nominations-overview?deliveryDay=2024-10-12&timescales=DAY_AHEAD";
+            
+            // Construct the URL dynamically using the specified date and a constant format
+            string url = $"https://empire.britned.com/public/aggregated-nominations-overview?deliveryDay={desiredDate:yyyy-MM-dd}&timescales=DAY_AHEAD";
 
-
-            // Using Playwright to scrape the "Net transfer capacity (MNS)" column
+            // Inform the user that data scraping is in progress
             Console.WriteLine("Fetching data using Playwright...");
+
+            // Create an instance of PlaywrightScraper to handle the web scraping task
             var scraper = new PlaywrightScraper();
+
+            // Call the ScrapeData method asynchronously to fetch the required data from the provided URL
             var scrapedData = await scraper.ScrapeData(url);
 
-            // Print the extracted data
+            // Display the header for the extracted data in a structured format
             Console.WriteLine("Extracted Data:");
+            Console.WriteLine("      UTC        GB-NL        NL-GB");
+
+            // Loop through each scraped data entry and output the values in a table format
             foreach (var data in scrapedData)
             {
-                Console.WriteLine($"{data.TimeUtc} - {data.Capacity}");
+                // Print each row of data with proper spacing to align the columns (UTC, GB-NL, NL-GB)
+                Console.WriteLine($"{data.TimeUtc,-8}    {data.GB_NL,-8}     {data.NL_GB,-8}");
             }
         }
     }

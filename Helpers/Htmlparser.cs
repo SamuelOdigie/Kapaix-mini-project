@@ -1,38 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
-
 namespace kapaix_mini_project.Helpers
 {
+    // This class is responsible for parsing and holding data related to transfer capacities.
     public class HtmlParser
     {
+        // Inner class that defines the structure for capacity data.
+        // It stores the time (converted to UTC) and the capacities for both GB-NL and NL-GB directions.
         public class CapacityData
         {
-            public DateTime TimeUtc { get; set; }
-            public required string Capacity { get; set; } 
-        }
-
-        public List<CapacityData> ParseCapacityData(string htmlContent)
-        {
-            var data = new List<CapacityData>();
-
-            // Regex to capture capacity values (update based on actual HTML structure)
-            var capacityPattern = new Regex(@"<td.*?Net transfer capacity.*?<td>(\d+)<\/td>.*?<td>(.*?)<\/td>", RegexOptions.Singleline);
-            var matches = capacityPattern.Matches(htmlContent);
-
-            foreach (Match match in matches)
-            {
-                var capacity = match.Groups[1].Value;
-                var time = DateTime.UtcNow;  // Placeholder, extract proper time
-
-                data.Add(new CapacityData
-                {
-                    TimeUtc = time,
-                    Capacity = capacity
-                });
-            }
-
-            return data;
+            public string? TimeUtc { get; set; } // Stores time in UTC as string.
+            public string? GB_NL { get; set; }   // Stores capacity from GB to NL (in MW).
+            public string? NL_GB { get; set; }   // Stores capacity from NL to GB (in MW).
         }
     }
 }

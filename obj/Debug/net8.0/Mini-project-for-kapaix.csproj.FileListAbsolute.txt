@@ -343,3 +343,4 @@ C:\Users\Samod\source\repos\Mini-project-for-kapaix\Mini-project-for-kapaix\obj\
 C:\Users\Samod\source\repos\Mini-project-for-kapaix\Mini-project-for-kapaix\obj\Debug\net8.0\Mini-project-for-kapaix.pdb
 C:\Users\Samod\source\repos\Mini-project-for-kapaix\Mini-project-for-kapaix\obj\Debug\net8.0\Mini-project-for-kapaix.genruntimeconfig.cache
 C:\Users\Samod\source\repos\Mini-project-for-kapaix\Mini-project-for-kapaix\obj\Debug\net8.0\ref\Mini-project-for-kapaix.dll
+C:\Users\Samod\source\repos\Mini-project-for-kapaix\Mini-project-for-kapaix\obj\Debug\net8.0\Mini-project-for-kapaix.sourcelink.json
