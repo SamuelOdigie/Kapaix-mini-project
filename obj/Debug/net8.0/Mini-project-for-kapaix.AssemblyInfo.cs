@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mini-project-for-kapaix")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3acc739527832ad5ffe4dc8a243904d311debd74")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+59a25f7ed69406a21d24dfc6ea37d6401071d379")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mini-project-for-kapaix")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mini-project-for-kapaix")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

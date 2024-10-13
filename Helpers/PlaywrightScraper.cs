@@ -2,7 +2,7 @@ using Microsoft.Playwright;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-
+using System.IO;
 namespace kapaix_mini_project.Helpers
 {
     public class PlaywrightScraper
@@ -85,6 +85,27 @@ namespace kapaix_mini_project.Helpers
             {
                 throw new FormatException($"Error converting CET time range to UTC: {ex.Message}");
             }
+        }
+          public void SaveDataToCSV(List<HtmlParser.CapacityData> data)
+        {
+            // Get the path to the user's Documents folder
+            string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            string filePath = Path.Combine(documentsPath, "scraped_data.csv");
+
+            using (var writer = new StreamWriter(filePath))
+            {
+                // Write CSV header
+                writer.WriteLine("TimeUtc,GB-NL,NL-GB");
+
+                // Write each row of data
+                foreach (var entry in data)
+                {
+                    writer.WriteLine($"{entry.TimeUtc},{entry.GB_NL},{entry.NL_GB}");
+                }
+            }
+
+            // Notify the user of where the file was saved
+            Console.WriteLine($"Data has been saved to: {filePath}");
         }
     }
 }

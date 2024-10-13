@@ -33,6 +33,20 @@ namespace kapaix_mini_project
                 // Print each row of data with proper spacing to align the columns (UTC, GB-NL, NL-GB)
                 Console.WriteLine($"{data.TimeUtc,-8}    {data.GB_NL,-8}     {data.NL_GB,-8}");
             }
+            
+        // Ask the user if they want to save the data to a CSV file
+        Console.WriteLine("Would you like to save this data to a CSV file? (yes/no): ");
+        var saveToFile = Console.ReadLine()?.Trim().ToLower();
+
+        if (saveToFile == "yes")
+        {
+            // Save the data to CSV in the Documents folder
+            scraper.SaveDataToCSV(scrapedData);
+        }
+        else
+        {
+            Console.WriteLine("Data will not be saved.");
         }
     }
+}
 }
